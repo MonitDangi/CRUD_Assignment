@@ -13,5 +13,4 @@ public interface EmployeeRepo extends JpaRepository<Employee, Long> {
     @Transactional
     @Query(value = "update Employee e set e.post = ?1 where e.empId = ?2")
     public void updateEmployeeById(String post, long id);
-    public Employee deleteByEmpId(long id);
 }
